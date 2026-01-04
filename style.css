@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111, #000);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+
+.text h2 {
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.text p {
+  margin: 20px 0;
+  opacity: 0.8;
+}
+
+button {
+  padding: 14px 35px;
+  background: linear-gradient(45deg, gold, orange);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+/* CAR */
+.car-box {
+  position: relative;
+}
+
+.car {
+  width: 600px;
+  filter: drop-shadow(0 40px 50px black);
+}
+
+/* WHEELS */
+.wheel {
+  width: 110px;
+  position: absolute;
+  animation: rotate 1.2s linear infinite;
+}
+
+.front-wheel {
+  bottom: 18px;
+  left: 390px;
+}
+
+.back-wheel {
+  bottom: 18px;
+  left: 110px;
+}
+
+/* ROTATION */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BMW Contact</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top,#0a0a0a,#000);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 90px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(15px);
+  z-index:999;
+}
+
+nav h1{
+  letter-spacing:5px;
+  font-weight:600;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:40px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:#00aaff;
+  bottom:-5px;
+  left:0;
+  transition:0.4s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* HERO */
+.hero{
+  height:60vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+    url("images/bmw-main.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:5px;
+}
+
+.mw{
+    height: 50vh;
+    background: 
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9))
+    ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.hero h2{
+  font-size:70px;
+  letter-spacing:4px;
+  text-shadow:0 20px 50px black;
+}
+
+/* CONTACT SECTION */
+.contact{
+  padding:120px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.form-box{
+  width:450px;
+  padding:50px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 40px 80px rgba(0,0,0,0.8);
+  position:relative;
+  overflow:hidden;
+}
+
+/* GLOW BORDER */
+.form-box::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:linear-gradient(120deg,#083247,#2686f5,#cbd1d4);
+  z-index:-1;
+  filter:blur(25px);
+  opacity:0.6;
+}
+
+.form-box h3{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:30px;
+  letter-spacing:3px;
+}
+
+/* FLOATING INPUT */
+.input-box{
+  position:relative;
+  margin-bottom:30px;
+}
+
+.input-box input,
+.input-box textarea{
+  width:100%;
+  padding:14px;
+  background:transparent;
+  border:none;
+  border-bottom:2px solid #444;
+  color:white;
+  outline:none;
+}
+
+.input-box label{
+  position:absolute;
+  left:0;
+  top:14px;
+  color:#888;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label{
+  top:-10px;
+  font-size:12px;
+  color:#00aaff;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+  border-color:#00aaff;
+}
+
+/* BUTTON */
+button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(45deg,#00aaff,#0044ff);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(0,170,255,0.5);
+}
+
+/* SUCCESS */
+#success{
+  text-align:center;
+  margin-top:25px;
+  color:#00ffcc;
+  display:none;
+  font-weight:500;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:30px;
+  letter-spacing:1px;
+  opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div style="display:flex;align-items:center;gap:12px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg"
+       style="height:40px;">
+  <h1 style="letter-spacing:3px;">BMW</h1>
+</div>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="parts.html">Parts</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h2>Contact BMW</h2>
+</section>
+
+ <section class="mw">
+  <h3>+91 6774912390 / +91 9837190123 / BMW-india@gmail.com</h3>
+ </section>
+
+<section class="contact">
+  <div class="form-box">
+    <h3>Get In Touch</h3>
+
+    <div class="input-box">
+      <input type="text" id="name" required>
+      <label>Your Name</label>
+    </div>
+
+    <div class="input-box">
+      <input type="email" id="email" required>
+      <label>Email Address</label>
+    </div>
+
+    <div class="input-box">
+      <textarea id="msg" rows="4" required></textarea>
+      <label>Your Message</label>
+    </div>
+
+    <button onclick="send()">Send Message</button>
+    <div id="success">✔ Message Sent Successfully</div>
+  </div>
+</section>
+
+<footer>
+  © Copyright Reserved BMW
+</footer>
+
+<script>
+function send(){
+  let n=document.getElementById("name").value;
+  let e=document.getElementById("email").value;
+  let m=document.getElementById("msg").value;
+
+  if(n===""||e===""||m===""){
+    alert("Please fill all fields");
+  }else{
+    document.getElementById("success").style.display="block";
+  }
+}
+</script>
+
+</body>
+</html>

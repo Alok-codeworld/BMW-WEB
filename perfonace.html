@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BMW Performance</title>
+
+<style>
+/* ✅ SMOOTH SCROLL */
+html{
+  scroll-behavior:smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+body{
+  background:#000;
+  color:white;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 80px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav h1{
+  letter-spacing:4px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
+  url("bmw wallpaper.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero h2{
+  font-size:70px;
+  letter-spacing:4px;
+}
+
+/* SECTION LEFT */
+.left{
+  padding:120px 80px;
+  background:#111;
+}
+
+.left h2{
+  font-size:48px;
+  margin-bottom:30px;
+}
+
+.left p{
+  max-width:800px;
+  font-size:18px;
+  line-height:1.9;
+  opacity:0.85;
+}
+
+/* STATS */
+.stats{
+  padding:120px 80px;
+  background:#000;
+}
+
+.cards{
+  display:flex;
+  gap:30px;
+}
+
+.card{
+  background:#111;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  flex:1;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+/* RIGHT SECTION */
+.right{
+  padding:120px 80px;
+  background:#111;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.right div{
+  max-width:800px;
+  text-align:right;
+}
+
+.right h2{
+  font-size:48px;
+  margin-bottom:30px;
+}
+
+.right p{
+  font-size:18px;
+  line-height:1.9;
+  opacity:0.85;
+}
+
+/* CTA */
+.cta{
+  padding:120px;
+  background:linear-gradient(45deg,#00aaff,#0044ff);
+  text-align:center;
+}
+
+.cta h2{
+  font-size:48px;
+}
+
+.cta button{
+  margin-top:30px;
+  padding:15px 40px;
+  border:none;
+  border-radius:40px;
+  background:black;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:30px;
+  opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div style="display:flex;align-items:center;gap:12px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg"
+       style="height:40px;">
+  <h1 style="letter-spacing:3px;">BMW</h1>
+</div>
+
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="#engine">Engine</a></li>
+    <li><a href="#stats">Stats</a></li>
+    <li><a href="#drive">Dynamics</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>BMW Performance</h2>
+</section>
+
+<!-- ENGINE -->
+<section id="engine" class="left">
+  <h2>Performance Engine</h2>
+  <p>
+    BMW performance engines are engineered for maximum power,
+    precision, and efficiency. TwinPower Turbo technology,
+    advanced fuel injection, and intelligent cooling systems
+    ensure thrilling acceleration and smooth performance.
+  </p>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="stats">
+  <h2 style="font-size:48px; margin-bottom:40px;">Performance Stats</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>0–100 km/h</h3>
+      <p>3.9 sec</p>
+    </div>
+
+    <div class="card">
+      <h3>Top Speed</h3>
+      <p>250 km/h</p>
+    </div>
+
+    <div class="card">
+      <h3>Power</h3>
+      <p>510 HP</p>
+    </div>
+  </div>
+</section>
+
+<!-- DRIVING -->
+<section id="drive" class="right">
+  <div>
+    <h2>Driving Experience</h2>
+    <p>
+      Adaptive suspension, precision steering, and intelligent
+      xDrive systems deliver unmatched control and confidence.
+      BMW ensures every drive is smooth, powerful, and engaging.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Experience BMW Performance</h2>
+  <button>Book a Test Drive</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © Copyright Reserved BMW
+</footer>
+
+</body>
+</html>
